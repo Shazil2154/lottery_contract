@@ -2,13 +2,13 @@ const path = require("path");
 const fs = require("fs");
 const solc = require("solc");
 
-const inboxPath = path.resolve(__dirname, "contracts", "Inbox.sol");
-const source = fs.readFileSync(inboxPath, "utf8");
+const LotteryPath = path.resolve(__dirname, "contracts", "Lottery.sol");
+const source = fs.readFileSync(LotteryPath, "utf8");
 
 var input = {
   language: "Solidity",
   sources: {
-    "Inbox.sol": {
+    "Lottery.sol": {
       content: source,
     },
   },
@@ -29,7 +29,7 @@ if (output.errors) {
     console.log(err.formattedMessage);
   });
 } else {
-  const contracts = output.contracts["Inbox.sol"];
+  const contracts = output.contracts["Lottery.sol"];
   for (let contractName in contracts) {
     const contract = contracts[contractName];
 

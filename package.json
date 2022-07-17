@@ -1,13 +1,13 @@
 {
-  "name": "first",
+  "name": "lottery",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/Inbox.test.js"
+    "test": "mocha tests/*.test.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Shazil Sattar",
   "license": "ISC",
   "dependencies": {
     "@truffle/hdwallet-provider": "^2.0.9",
